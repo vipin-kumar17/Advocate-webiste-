@@ -1,0 +1,66 @@
+import Link from "next/link";
+import Logo from "./Logo";
+
+const COLUMNS = [
+  {
+    title: "Chambers",
+    links: [
+      { href: "/about", label: "The Advocate" },
+      { href: "/practice-areas", label: "Practice Areas" },
+      { href: "/results", label: "Notable Matters" },
+      { href: "/gallery", label: "Chambers" },
+    ],
+  },
+  {
+    title: "Reach Us",
+    links: [
+      { href: "/contact", label: "Book a Consultation" },
+      { href: "tel:+919820000000", label: "+91 98200 00000" },
+      { href: "mailto:chambers@kulkarniassociates.in", label: "chambers@kulkarniassociates.in" },
+    ],
+  },
+];
+
+export default function Footer() {
+  return (
+    <footer className="bg-panel border-t hairline grain">
+      <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-16 grid gap-12 md:grid-cols-[1.3fr_1fr_1fr]">
+        <div>
+          <Logo />
+          <p className="mt-6 max-w-sm text-sm leading-relaxed text-parchment-dim">
+            Counsel before the High Courts and the Supreme Court of India in
+            constitutional, criminal, civil and commercial matters, with a
+            practice built on preparation, precedent and plain speaking.
+          </p>
+        </div>
+
+        {COLUMNS.map((col) => (
+          <div key={col.title}>
+            <h3 className="font-display italic text-brass-bright text-sm mb-5">
+              {col.title}
+            </h3>
+            <ul className="space-y-3">
+              {col.links.map((l) => (
+                <li key={l.label}>
+                  <Link
+                    href={l.href}
+                    className="text-sm text-parchment-dim hover:text-parchment transition-colors"
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      <div className="border-t hairline">
+        <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-6 flex flex-col md:flex-row gap-3 items-center justify-between text-xs text-parchment-dim">
+          <p>&copy; {new Date().getFullYear()} Kulkarni &amp; Associates. All rights reserved.</p>
+          <p>Bar Council of India Enrolment No. MH/000000/2005</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
