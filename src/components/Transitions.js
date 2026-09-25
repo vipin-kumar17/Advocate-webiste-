@@ -2,9 +2,32 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Transitions({ children }) {
   const pathname = usePathname();
+
+  useEffect(() => {
+    // Naye page par jaate hi scroll top par reset karo
+    window.scrollTo(0, 0);
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Naye page ka DOM/images settle hone ke baad ScrollTrigger ko
+    // force-refresh karo, taaki wo purane page ki stale positions
+    // use karne ki bajaye naye page ke hisaab se sahi calculate kare.
+    const raf = requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+    });
+    const t = setTimeout(() => ScrollTrigger.refresh(), 400);
+
+    return () => {
+      cancelAnimationFrame(raf);
+      clearTimeout(t);
+    };
+  }, [pathname]);
 
   return (
     <AnimatePresence mode="wait" initial={false}>
