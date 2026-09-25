@@ -34,23 +34,24 @@ export default function About() {
           </ScrollReveal>
         </div>
 
-        <ScrollReveal delay={0.25} className="justify-self-center md:justify-self-end">
+        <ScrollReveal delay={0.25} className="w-full flex justify-center md:justify-end">
           <div
             style={{
               position: "relative",
-              width: "500px",
-              maxWidth: "100%",
-              height: "400px",
+              width: "100%",
+              maxWidth: "440px",
+              aspectRatio: "3 / 2",
               overflow: "hidden",
               borderRadius: "24px",
+              minWidth: 0,
             }}
           >
             <Image
               src="/images/library.jpg"
               alt="Chambers law library, shelves of bound reports"
-              width={480}
-              height={560}
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              fill
+              sizes="(min-width: 768px) 35vw, 90vw"
+              style={{ objectFit: "cover" }}
             />
           </div>
         </ScrollReveal>
@@ -137,13 +138,24 @@ export default function About() {
               Book a Consultation
             </Link>
           </ScrollReveal>
-          <ScrollReveal delay={0.15} className="relative h-[480px] overflow-hidden rounded-3xl">
+          <ScrollReveal
+            delay={0.15}
+            className="w-full"
+            style={{
+              position: "relative",
+              width: "100%",
+              aspectRatio: "3 / 2",
+              overflow: "hidden",
+              borderRadius: "24px",
+              minWidth: 0,
+            }}
+          >
             <Image
               src="/images/portrait-lawbook.jpg"
               alt="The advocate holding a bound volume of law reports"
               fill
               sizes="(min-width: 768px) 45vw, 100vw"
-              className="object-cover"
+              style={{ objectFit: "cover" }}
             />
           </ScrollReveal>
         </div>

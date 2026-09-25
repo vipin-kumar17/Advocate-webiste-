@@ -10,7 +10,7 @@ export const metadata = {
 export default function PracticeAreas() {
   return (
     <>
-           <section className="pt-40 pb-24 mx-auto max-w-[1400px] px-6 md:px-10 grid md:grid-cols-[1.1fr_0.9fr] gap-14 items-center">
+               <section className="pt-40 pb-24 mx-auto max-w-[1400px] px-6 md:px-10 grid md:grid-cols-[1.1fr_0.9fr] gap-14 items-center">
         <ScrollReveal className="max-w-2xl">
           <span className="text-brass-bright text-xs tracking-[0.28em]">PRACTICE AREAS</span>
           <h1 className="font-display text-5xl md:text-7xl mt-5 leading-[0.98]">
@@ -23,23 +23,24 @@ export default function PracticeAreas() {
           </p>
         </ScrollReveal>
 
-        <ScrollReveal delay={0.15} className="justify-self-center md:justify-self-end">
+        <ScrollReveal delay={0.15} className="w-full flex justify-center md:justify-end">
           <div
             style={{
               position: "relative",
-              width: "500px",
-              maxWidth: "100%",
-              height: "480px",
+              width: "100%",
+              maxWidth: "420px",
+              aspectRatio: "1 / 1",
               overflow: "hidden",
               borderRadius: "24px",
+              minWidth: 0,
             }}
           >
             <Image
               src="/images/portrait-columns.jpg"
               alt="Advocate outside the High Court"
-              width={420}
-              height={480}
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              fill
+              sizes="(min-width: 768px) 35vw, 90vw"
+              style={{ objectFit: "cover" }}
             />
           </div>
         </ScrollReveal>

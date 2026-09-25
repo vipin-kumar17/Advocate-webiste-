@@ -54,9 +54,9 @@ export default function Home() {
 
           <FadeIn delay={0.35} className="flex items-center justify-center lg:justify-end mt-10 lg:mt-0">
             <div className="relative w-full">
-              <div
+            <div
                 className="relative w-full overflow-hidden"
-                style={{ height: "420px", borderRadius: "24px" }}
+                style={{ aspectRatio: "16 / 9", borderRadius: "24px" }}
               >
                 <Image
                   src="/images/desk-portrait.jpg"
@@ -138,13 +138,14 @@ export default function Home() {
             as="div"
             group
             stagger={0.08}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-rule border hairline"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6"
           >
             {PRACTICE_AREAS.map((area) => (
               <Link
                 key={area.slug}
                 href="/practice-areas"
-                className="group bg-panel p-8 flex flex-col justify-between min-h-[220px] hover:bg-panel-2 transition-colors duration-300"
+                className="group bg-panel p-8 flex flex-col justify-between min-h-[220px] border hairline hover:bg-panel-2 hover:border-brass-dim transition-colors duration-300"
+                style={{ borderRadius: "16px" }}
               >
                 <div>
                   <h3 className="font-display text-xl leading-snug text-parchment group-hover:text-brass-bright transition-colors">

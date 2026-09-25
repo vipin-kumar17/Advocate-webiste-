@@ -19,18 +19,18 @@ export default function Gallery() {
       </section>
 
       <section className="mx-auto max-w-[1400px] px-6 md:px-10 pb-28 grid md:grid-cols-2 gap-14 items-center">
-        <ScrollReveal>
+      <ScrollReveal>
           <div
             style={{
               position: "relative",
               width: "100%",
-              aspectRatio: "1 / 1",
+              aspectRatio: "16 / 9",
               overflow: "hidden",
               borderRadius: "24px",
             }}
           >
             <Image
-              src="/images/courtroom-speech.jpg"
+              src="/images/courtroom-matter.jpg"
               alt="Advocate presenting oral arguments before a full courtroom"
               fill
               sizes="(min-width: 768px) 45vw, 100vw"

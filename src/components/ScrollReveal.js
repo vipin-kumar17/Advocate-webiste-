@@ -8,6 +8,7 @@ export default function ScrollReveal({
   children,
   as: Tag = "div",
   className = "",
+  style = {},
   y = 48,
   duration = 1,
   delay = 0,
@@ -51,7 +52,7 @@ export default function ScrollReveal({
   }, [y, duration, delay, stagger, start, once]);
 
   return (
-    <Tag ref={ref} className={className} data-reveal-group={group ? "" : undefined}>
+    <Tag ref={ref} className={className} style={style} data-reveal-group={group ? "" : undefined}>
       {children}
     </Tag>
   );
