@@ -10,22 +10,22 @@ export default function Transitions({ children }) {
   const pathname = usePathname();
 
   useEffect(() => {
-    // Naye page par jaate hi scroll top par reset karo
+    document.documentElement.style.overflow = "";
     window.scrollTo(0, 0);
 
     gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.refresh();
 
-    // Naye page ka DOM/images settle hone ke baad ScrollTrigger ko
-    // force-refresh karo, taaki wo purane page ki stale positions
-    // use karne ki bajaye naye page ke hisaab se sahi calculate kare.
-    const raf = requestAnimationFrame(() => {
-      ScrollTrigger.refresh();
-    });
-    const t = setTimeout(() => ScrollTrigger.refresh(), 400);
+    // Page ki height jab bhi badle (images/3D load hone ki wajah se),
+    // ScrollTrigger ko turant dobara-calculate karwao — isi se
+    // "scroll karne par hi content dikhna" wala bug fix hota hai.
+    const ro = new ResizeObserver(() => ScrollTrigger.refresh());
+    ro.observe(document.body);
+    const stop = setTimeout(() => ro.disconnect(), 3000);
 
     return () => {
-      cancelAnimationFrame(raf);
-      clearTimeout(t);
+      ro.disconnect();
+      clearTimeout(stop);
     };
   }, [pathname]);
 
@@ -38,6 +38,7 @@ export default function Transitions({ children }) {
         exit={{ opacity: 0, y: -16 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className="min-h-screen"
+        onAnimationComplete={() => ScrollTrigger.refresh()}
       >
         {children}
       </motion.main>

@@ -37,10 +37,10 @@ export default function Navbar() {
 
   return (
     <>
-      <header
-               className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ${
-                scrolled || open ? "bg-ink/95 backdrop-blur border-b border-rule" : "bg-transparent"
-              }`}
+            <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ${
+          scrolled || open ? "bg-ink/95 backdrop-blur border-b border-rule" : "bg-transparent"
+        }`}
       >
         <nav className="mx-auto max-w-[1400px] px-6 md:px-10 h-20 flex items-center justify-between">
           <Link href="/" className="text-brass-bright hover:text-brass transition-colors">
@@ -108,7 +108,7 @@ export default function Navbar() {
             animate={{ clipPath: "circle(150% at 100% 0%)" }}
             exit={{ clipPath: "circle(0% at 100% 0%)" }}
             transition={{ duration: 0.65, ease: [0.76, 0, 0.24, 1] }}
-            className="fixed inset-0 z-40 bg-panel grain lg:hidden flex flex-col justify-start px-8 pt-28 pb-10 overflow-y-auto"
+                      className="fixed inset-0 z-40 bg-panel grain lg:hidden flex flex-col justify-start px-8 pt-28 pb-10 overflow-y-auto"
           >
             <ul className="flex flex-col gap-1">
               {LINKS.map((link, i) => (
@@ -121,6 +121,9 @@ export default function Navbar() {
                 >
                   <Link
                     href={link.href}
+                    onClick={() => {
+                      document.documentElement.style.overflow = "";
+                    }}
                     className={`font-display text-[2.2rem] py-4 block ${
                       pathname === link.href ? "text-brass-bright italic" : "text-parchment"
                     }`}
