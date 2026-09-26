@@ -124,7 +124,7 @@ export default function Navbar() {
                     onClick={() => {
                       document.documentElement.style.overflow = "";
                     }}
-                    className={`font-display text-[2.2rem] py-4 block ${
+                    className={`font-display text-[1.4rem] py-3 block ${
                       pathname === link.href ? "text-brass-bright italic" : "text-parchment"
                     }`}
                   >
@@ -139,7 +139,7 @@ export default function Navbar() {
               transition={{ delay: 0.55 }}
               className="mt-10 text-parchment-dim text-sm"
             >
-              +91 98200 00000 &nbsp;&middot;&nbsp; chambers@kulkarniassociates.in
+              {/* +91 98200 00000 &nbsp;&middot;&nbsp; chambers@kulkarniassociates.in */}
             </motion.p>
           </motion.div>
         )}
