@@ -20,9 +20,9 @@ const inter = localFont({
 });
 
 export const metadata = {
-  title: "Kulkarni & Associates \u2014 Advocates & Legal Counsel",
+  title: "Manish Kumar — Advocate | Lucknow, Gorakhpur & Unnao",
   description:
-    "Kulkarni & Associates is a chambers of advocates practising constitutional, criminal, civil and commercial law before the High Courts and the Supreme Court of India.",
+    "Manish Kumar is an advocate practising in Lucknow, Gorakhpur and Unnao, providing legal representation and counsel in criminal, civil and revenue matters.",
 };
 
 export default function RootLayout({ children }) {
