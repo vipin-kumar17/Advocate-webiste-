@@ -29,10 +29,10 @@ export default function Logo({ className = "" }) {
       </svg>
       <span className="font-display leading-none">
         <span className="block text-[0.95rem] tracking-[0.02em] text-parchment">
-          Kulkarni <span className="italic text-brass-bright">&amp;</span> Associates
+          Manish Kumar
         </span>
         <span className="block text-[0.55rem] tracking-[0.32em] text-parchment-dim mt-0.5">
-          CHAMBERS OF LAW, ESTABLISHED 2005
+         Advocate
         </span>
       </span>
     </span>

@@ -6,10 +6,11 @@ export const metadata = {
 };
 
 const OFFICE = [
-  { label: "Chambers", value: "402, Solicitor House, Veer Nariman Road, Fort, Mumbai 400001" },
-  { label: "Telephone", value: "+91 98200 00000" },
-  { label: "Email", value: "chambers@kulkarniassociates.in" },
-  { label: "Hours", value: "Monday \u2013 Saturday, 10:00 \u2013 18:30 IST" },
+  { label: "Lucknow", value: "High Court, Lucknow" },
+  { label: "Gorakhpur", value: "Kachahari, Gorakhpur" },
+  { label: "Unnao", value: "Kachahari, Unnao" },
+  { label: "Telephone", value: "+91 91401 35398" },
+  { label: "Email", value: "manishkabvp@gmail.com" },
 ];
 
 export default function Contact() {
@@ -46,26 +47,7 @@ export default function Contact() {
             </ul>
           </div>
 
-          <div className="relative h-64 border hairline overflow-hidden bg-panel">
-            <svg
-              viewBox="0 0 400 260"
-              className="absolute inset-0 h-full w-full text-brass-dim"
-              fill="none"
-            >
-              {Array.from({ length: 9 }).map((_, i) => (
-                <line key={`v${i}`} x1={i * 50} y1="0" x2={i * 50} y2="260" stroke="currentColor" strokeWidth="0.5" opacity="0.35" />
-              ))}
-              {Array.from({ length: 6 }).map((_, i) => (
-                <line key={`h${i}`} x1="0" y1={i * 52} x2="400" y2={i * 52} stroke="currentColor" strokeWidth="0.5" opacity="0.35" />
-              ))}
-              <circle cx="200" cy="130" r="6" fill="#e0c07f" />
-              <circle cx="200" cy="130" r="16" stroke="#e0c07f" strokeWidth="1" opacity="0.6" />
-              <circle cx="200" cy="130" r="30" stroke="#e0c07f" strokeWidth="0.7" opacity="0.35" />
-            </svg>
-            <p className="absolute bottom-4 left-4 text-xs tracking-[0.1em] text-parchment-dim">
-              FORT, MUMBAI
-            </p>
-          </div>
+        
         </ScrollReveal>
       </section>
     </>

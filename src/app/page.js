@@ -4,20 +4,20 @@ import Hero3D from "@/components/hero/Hero3D";
 import ScrollReveal from "@/components/ScrollReveal";
 import StatCounter from "@/components/StatCounter";
 import FadeIn from "@/components/FadeIn";
-import { STATS, PRACTICE_AREAS, APPROACH, MATTERS } from "@/lib/content";
+import { STATS, PRACTICE_AREAS, APPROACH, MATTERS, COURTS } from "@/lib/content";
 
 export default function Home() {
   return (
     <>
-           {/* HERO */}
-           <section className="relative min-h-[100svh] w-full overflow-hidden bg-ink">
+      {/* HERO */}
+      <section className="relative min-h-[100svh] w-full overflow-hidden bg-ink">
         <Hero3D />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink via-ink/5 to-ink/50" />
         <div className="relative z-10 min-h-[100svh] mx-auto max-w-[1400px] px-6 md:px-10 pt-28 pb-16 grid lg:grid-cols-[1fr_1.05fr] gap-12 items-center">
           <div>
             <FadeIn>
               <p className="text-brass-bright text-xs tracking-[0.28em] mb-5">
-                ADVOCATES &amp; LEGAL COUNSEL &mdash; MUMBAI HIGH COURT
+                ADVOCATES &amp; LEGAL COUNSEL &mdash; LUCKNOW HIGH COURT
               </p>
             </FadeIn>
             <FadeIn delay={0.1}>
@@ -29,9 +29,8 @@ export default function Home() {
             </FadeIn>
             <FadeIn delay={0.2}>
               <p className="mt-7 max-w-lg text-parchment-dim text-base md:text-lg leading-relaxed">
-                Kulkarni &amp; Associates represents individuals, families and
-                businesses before the High Court and the Supreme Court of India
-                &mdash; in matters where preparation decides the outcome.
+                Manish Kumar, Advocate Dedicated legal representation before the High Court of Judicature at Allahabad, Lucknow Bench, with a focus on careful preparation, sound legal advice, and committed advocacy.
+
               </p>
             </FadeIn>
             <FadeIn delay={0.3}>
@@ -54,7 +53,7 @@ export default function Home() {
 
           <FadeIn delay={0.35} className="flex items-center justify-center lg:justify-end mt-10 lg:mt-0">
             <div className="relative w-full">
-            <div
+              <div
                 className="relative w-full overflow-hidden"
                 style={{ aspectRatio: "16 / 9", borderRadius: "24px" }}
               >
@@ -69,15 +68,15 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/55 via-transparent to-transparent" />
               </div>
               <p className="mt-4 text-[0.65rem] tracking-[0.16em] text-parchment-dim text-center lg:text-left">
-                ADV. R. KULKARNI &mdash; FOUNDING PARTNER
+                ADV. MANISH KUMAR
               </p>
             </div>
           </FadeIn>
         </div>
-        <div className="absolute bottom-6 right-6 md:right-10 z-10 flex items-center gap-2 text-parchment-dim text-xs tracking-[0.15em]">
+        {/* <div className="absolute bottom-6 right-6 md:right-10 z-10 flex items-center gap-2 text-parchment-dim text-xs tracking-[0.15em]">
           <span className="h-8 w-px bg-brass-dim inline-block" />
           SCROLL
-        </div>
+        </div> */}
       </section>
 
       {/* STATS STRIP */}
@@ -104,16 +103,8 @@ export default function Home() {
         </ScrollReveal>
         <ScrollReveal delay={0.15}>
           <p className="text-parchment-dim leading-relaxed text-base md:text-lg">
-            We take on fewer matters than we could, so that each one gets the
-            time it needs. Clients are told what a case is worth, what it
-            will cost in time and money, and where a settlement makes more
-            sense than a trial &mdash; even when that is not what they came
-            to hear.
-          </p>
-          <p className="mt-5 text-parchment-dim leading-relaxed text-base md:text-lg">
-            Founded in 2019 by Advocate R. Kulkarni after fourteen years of
-            independent practice, the chambers now briefs a small team of
-            juniors across constitutional, criminal and commercial work.
+          I take on matters where careful preparation, clear legal advice, and dedicated representation can make a meaningful difference. Clients deserve to understand their case, the expected costs in time and money, and the legal options available to them — including when a settlement may make more sense than prolonged litigation.
+          Based in Lucknow, I represent clients across a range of legal matters, providing practical advice and committed representation at every stage of the legal process.
           </p>
           <Link
             href="/about"
@@ -165,10 +156,34 @@ export default function Home() {
       </section>
 
       {/* IMAGE BREAK */}
-             
+
+      {/* COURT LOCATIONS */}
+      <section className="mx-auto max-w-[1400px] px-6 md:px-10 py-28">
+        <ScrollReveal className="max-w-xl mb-16">
+          <span className="text-brass-bright text-xs tracking-[0.28em]">WHERE WE SIT</span>
+          <h2 className="font-display text-4xl md:text-5xl mt-5 leading-[1.08]">
+            Three courts, one advocate.
+          </h2>
+          <p className="mt-6 text-parchment-dim text-lg leading-relaxed">
+            Advocate Manish Kumar appears in courts across three cities, so
+            you can meet at the court closest to you.
+          </p>
+        </ScrollReveal>
+
+        <ScrollReveal as="div" group stagger={0.1} className="grid md:grid-cols-3 gap-5 md:gap-6">
+          {COURTS.map((c) => (
+            <div key={c.city} className="bg-panel p-8 border hairline" style={{ borderRadius: "16px" }}>
+              <h3 className="font-display text-3xl">{c.city}</h3>
+              <p className="mt-2 text-sm text-brass-bright">{c.court}</p>
+              <p className="mt-4 text-sm text-parchment-dim leading-relaxed">{c.note}</p>
+            </div>
+          ))}
+        </ScrollReveal>
+      </section>
+
       <section className="bg-panel border-y hairline">
         <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-24 grid md:grid-cols-2 gap-12 items-center">
-        <ScrollReveal
+          <ScrollReveal
             className="relative w-full aspect-square overflow-hidden order-2 md:order-1"
             style={{ borderRadius: "24px" }}
           >
@@ -186,7 +201,7 @@ export default function Home() {
               the weeks before it, in the questions nobody thought to ask.&rdquo;
             </p>
             <p className="mt-6 text-xs tracking-[0.2em] text-brass-bright">
-              ADV. R. KULKARNI, FOUNDING PARTNER
+              ADV. MANISH KUMAR
             </p>
           </ScrollReveal>
         </div>

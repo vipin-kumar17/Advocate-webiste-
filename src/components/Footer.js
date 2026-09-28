@@ -5,6 +5,7 @@ const COLUMNS = [
   {
     title: "Chambers",
     links: [
+      { href: "/", label: "Home" },
       { href: "/about", label: "The Advocate" },
       { href: "/practice-areas", label: "Practice Areas" },
       { href: "/results", label: "Notable Matters" },
@@ -15,8 +16,8 @@ const COLUMNS = [
     title: "Reach Us",
     links: [
       { href: "/contact", label: "Book a Consultation" },
-      { href: "tel:+919820000000", label: "+91 98200 00000" },
-      { href: "mailto:chambers@kulkarniassociates.in", label: "chambers@kulkarniassociates.in" },
+      { href: "tel:+919820000000", label: "+91 9140135398" },
+      { href: "manishkabvp@gmail.com", label: "manishkabvp@gmail.com" },
     ],
   },
 ];
@@ -57,8 +58,24 @@ export default function Footer() {
 
       <div className="border-t hairline">
         <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-6 flex flex-col md:flex-row gap-3 items-center justify-between text-xs text-parchment-dim">
-          <p>&copy; {new Date().getFullYear()} Kulkarni &amp; Associates. All rights reserved.</p>
-          <p>Bar Council of India Enrolment No. MH/000000/2005</p>
+          <p>&copy; {new Date().getFullYear()} Manish Kumar All rights reserved.</p>
+          <p>Bar Council of India Enrolment No. UP/000000/2005</p>
+        </div>
+        <div className="mx-auto max-w-[1400px] px-6 md:px-10 pb-6 text-center text-[0.7rem] text-parchment-dim/80">
+          Website designed &amp; developed by{" "}
+          <span className="text-brass-bright">VIPIN KUMAR</span>
+          {" "}&mdash;{" "}
+          
+            <a href="mailto:ppvipin9@email.com"
+            className="hover:text-parchment transition-colors underline underline-offset-2">
+            ppvipin9@email.com
+          </a>
+          {" "}/{" "}
+          
+            <a href="tel:+918318801572"
+            className="hover:text-parchment transition-colors underline underline-offset-2">
+            +91 8318801572
+          </a>
         </div>
       </div>
     </footer>

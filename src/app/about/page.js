@@ -11,25 +11,22 @@ export default function About() {
   return (
     <>
       {/* HERO + PORTRAIT, kept tight together */}
-           <section className="pt-40 pb-24 mx-auto max-w-[1400px] px-6 md:px-10 grid md:grid-cols-[1.05fr_0.75fr] gap-14 items-center">
+      <section className="pt-40 pb-24 mx-auto max-w-[1400px] px-6 md:px-10 grid md:grid-cols-[1.05fr_0.75fr] gap-14 items-center">
         <div>
           <ScrollReveal>
             <span className="text-brass-bright text-xs tracking-[0.28em]">THE ADVOCATE</span>
             <h1 className="font-display text-5xl md:text-7xl mt-5 leading-[0.98]">
-              R. Kulkarni
+              MANISH KUMAR
             </h1>
-            <p className="mt-4 text-parchment-dim text-lg">
+            {/* <p className="mt-4 text-parchment-dim text-lg">
               Founding Partner &mdash; enrolled 2005
-            </p>
+            </p> */}
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
             <p className="mt-6 text-parchment-dim leading-relaxed text-base md:text-lg">
-              Nineteen years of practice across trial courts, the High Court
-              and briefs before the Supreme Court of India, with a particular
-              interest in constitutional remedies and complex commercial
-              disputes. Known among juniors for reading the whole file before
-              forming a view, and among clients for saying so when a matter
-              is not worth fighting.
+              Dedicated to providing clear legal advice and committed representation across criminal, civil and revenue matters. Based in Lucknow, I focus on understanding each case thoroughly, explaining the available legal options clearly, and preparing every matter with care and attention to detail.
+              My approach is straightforward: understand the facts, study the law, and help clients make informed decisions about their legal matters.
+
             </p>
           </ScrollReveal>
         </div>
@@ -68,20 +65,21 @@ export default function About() {
           </ScrollReveal>
           <ScrollReveal delay={0.15} className="space-y-5 text-parchment-dim leading-relaxed text-base md:text-lg">
             <p>
-              Most arguments are won or lost long before a matter is called
-              for hearing &mdash; in how carefully the pleadings are drafted,
-              how completely the documents are indexed, and how honestly a
-              client&rsquo;s chances have been assessed at the outset.
+              Most arguments are shaped long before a matter is 
+              called for hearing — through careful preparation, 
+              thorough understanding of the facts, well-organised 
+              documents, and a clear assessment of the legal position from the outset.
             </p>
             <p>
-              That is the discipline this chambers is built around: fewer
-              matters, more preparation, and a plain account of where things
-              stand at every stage, whether the news is good or not.
+              That is the approach I follow in my practice: focused matters, 
+              detailed preparation, and clear communication with clients at every stage. 
+              Whether the matter concerns criminal, civil, or revenue law, 
+              I believe clients should always have a clear understanding of 
+              where their case stands and what options are available to them.
             </p>
             <p>
-              Outside chambers, R. Kulkarni lectures occasionally on
-              constitutional law at a Mumbai law college and serves on the
-              panel of counsel for the State Legal Services Authority.
+              Based in Lucknow, I remain committed to providing practical legal advice
+               and dedicated representation, with careful attention to every matter entrusted to me.
             </p>
           </ScrollReveal>
         </div>
@@ -92,7 +90,7 @@ export default function About() {
         <ScrollReveal className="max-w-xl mb-16">
           <span className="text-brass-bright text-xs tracking-[0.28em]">CAREER</span>
           <h2 className="font-display text-4xl md:text-5xl mt-5 leading-[1.08]">
-            Nineteen years, in brief.
+            Thirteen years, in brief.
           </h2>
         </ScrollReveal>
 
@@ -100,9 +98,8 @@ export default function About() {
           {TIMELINE.map((item, i) => (
             <div
               key={item.year}
-              className={`flex items-baseline gap-8 py-6 ${
-                i !== TIMELINE.length - 1 ? "border-b hairline" : ""
-              }`}
+              className={`flex items-baseline gap-8 py-6 ${i !== TIMELINE.length - 1 ? "border-b hairline" : ""
+                }`}
             >
               <span className="font-display italic text-brass-bright text-2xl w-24 shrink-0">
                 {item.year}
@@ -120,10 +117,9 @@ export default function About() {
             <span className="text-brass-bright text-xs tracking-[0.28em]">CREDENTIALS</span>
             <ul className="mt-8 space-y-5">
               {[
-                "B.A., LL.B. (Hons.), Government Law College, Mumbai",
-                "Enrolled with the Bar Council of Maharashtra & Goa, 2005",
-                "Designated Senior Panel Counsel, State Legal Services Authority",
-                "Member, Bombay Bar Association",
+                "B.A., LL.B., Government College, Gorakhpur",
+                "Enrolled with the Bar Council of Uttar Pradesh, 2013",
+                "Member, Uttar Pradesh Bar Association",
               ].map((c) => (
                 <li key={c} className="flex gap-4 border-b hairline pb-5 text-parchment-dim">
                   <span className="text-brass-dim">&mdash;</span>

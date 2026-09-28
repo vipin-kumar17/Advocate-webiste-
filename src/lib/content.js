@@ -1,7 +1,7 @@
 export const STATS = [
-  { value: 19, suffix: "+", label: "Years at the Bar" },
-  { value: 640, suffix: "+", label: "Matters Briefed" },
-  { value: 3, suffix: "", label: "Constitutional Benches Argued" },
+  { value: 13, suffix: "+", label: "Years at the Bar" },
+  { value: 1000, suffix: "+", label: "Matters Briefed" },
+  { value: 10, suffix: "+", label: "Years of Courtroom Experience" },
   { value: 92, suffix: "%", label: "Matters Resolved in Client\u2019s Favour" },
 ];
 
@@ -62,15 +62,15 @@ export const PRACTICE_AREAS = [
     ],
   },
   {
-    slug: "property-real-estate",
-    title: "Property & Real Estate",
+    slug: "Revenue Law",
+    title: "Revenue Law",
     summary:
-      "Title disputes, RERA proceedings and possession matters for individual owners, builders and housing societies.",
-    points: [
-      "Title verification and boundary disputes",
-      "RERA complaints and builder disputes",
-      "Tenancy and eviction proceedings",
-    ],
+      "Representation in land and revenue matters, including mutation, land records, partition, possession disputes and proceedings before revenue authorities.",
+      points: [
+        "Land records and mutation matters",
+        "Land partition and boundary disputes",
+        "Proceedings before revenue authorities",
+        ],        
   },
 ];
 
@@ -99,41 +99,61 @@ export const APPROACH = [
 
 export const MATTERS = [
   {
-    tag: "Constitutional",
-    title: "Challenge to a state recruitment policy",
-    body: "Acted for a group of candidates in a writ petition before the High Court challenging an arbitrary change to selection criteria after the examination had been held; the amended policy was set aside.",
+    tag: "Criminal",
+    title: "Criminal Defence and Representation",
+    body: "Representation and legal assistance in criminal matters, with careful preparation, examination of the facts, and representation before the appropriate courts.",
   },
+
   {
-    tag: "Commercial Arbitration",
-    title: "Multi-crore supply contract dispute",
-    body: "Represented a mid-sized manufacturing company in an institutional arbitration arising from a terminated supply agreement, securing an award covering the bulk of the claimed amount.",
+    tag: "Revenue",
+    title: "Land and Revenue Matters",
+    body: "Representation in land and revenue matters, including land records, mutation, partition, possession disputes and proceedings before revenue authorities.",
   },
-  {
-    tag: "Criminal Appeal",
-    title: "Acquittal on appeal in an economic offence",
-    body: "Briefed the appeal against conviction in a cheque-dishonour matter, securing an acquittal on the ground that the statutory presumption stood rebutted on the evidence on record.",
-  },
+
   {
     tag: "Civil",
-    title: "Specific performance of a sale agreement",
-    body: "Obtained a decree of specific performance for a homebuyer against a developer who had attempted to resile from a registered agreement for sale.",
+    title: "Civil Dispute Representation",
+    body: "Legal representation in civil disputes involving property, recovery, possession, agreements and other civil matters before the appropriate courts.",
   },
+
   {
-    tag: "Family",
-    title: "Consent settlement in a matrimonial dispute",
-    body: "Negotiated a mutual consent settlement covering custody and maintenance within four months, avoiding a contested trial that would have taken years.",
+    tag: "Criminal",
+    title: "Criminal Proceedings",
+    body: "Representation at different stages of criminal proceedings, with a focus on understanding the facts, preparing the case and presenting the matter effectively.",
   },
+
   {
-    tag: "Property",
-    title: "RERA complaint against delayed possession",
-    body: "Secured a RERA order directing a builder to pay interest for delayed possession to a group of thirty-one flat purchasers in a single consolidated complaint.",
+    tag: "Revenue",
+    title: "Land Disputes and Proceedings",
+    body: "Assistance in land-related disputes and proceedings concerning ownership records, partition, boundaries, possession and other revenue matters.",
+  },
+
+  {
+    tag: "Civil",
+    title: "Civil Litigation",
+    body: "Dedicated representation in civil litigation with attention to pleadings, documents, legal issues and the specific circumstances of each matter.",
   },
 ];
 
 export const TIMELINE = [
-  { year: "2005", label: "Enrolled with the Bar Council" },
-  { year: "2009", label: "Began independent practice at the High Court" },
-  { year: "2014", label: "First constitutional bench matter argued" },
-  { year: "2019", label: "Founded Kulkarni & Associates" },
-  { year: "2024", label: "Designated Senior Panel Counsel, State Legal Services Authority" },
+  { year: "2013", label: "Enrolled with the Bar Council" },
+  { year: "2015", label: "Began independent practice at the High Court" },
+];
+
+export const COURTS = [
+  {
+    city: "Lucknow",
+    court: "High Court, Lucknow",
+    note: "Sits here on court days. 10:00 AM to 4:00 PM.",
+  },
+  {
+    city: "Gorakhpur",
+    court: "Kachahari, Gorakhpur",
+    note: "Sits here on court days. 10:00 AM to 4:00 PM.",
+  },
+  {
+    city: "Unnao",
+    court: "Kachahari, Unnao",
+    note: "Sits here on court days. 10:00 AM to 4:00 PM.",
+  },
 ];
