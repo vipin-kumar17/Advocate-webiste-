@@ -1,7 +1,7 @@
 export const STATS = [
   { value: 13, suffix: "+", label: "Years at the Bar" },
   { value: 500, suffix: "+", label: "Matters Briefed" },
-  { value: 14, suffix: "+", label: "Years of Courtroom Experience" },
+  { value: 12, suffix: "+", label: "Years of Courtroom Experience" },
   { value: 95, suffix: "%", label: "Matters Resolved in Client\u2019s Favour" },
 ];
 
