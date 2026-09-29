@@ -24,7 +24,7 @@ const COLUMNS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-panel border-t hairline grain">
+    <footer className="relative bg-panel border-t hairline grain">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-16 grid gap-12 md:grid-cols-[1.3fr_1fr_1fr]">
         <div>
           <Logo />
