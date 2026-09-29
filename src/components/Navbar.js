@@ -104,10 +104,11 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ clipPath: "circle(0% at 100% 0%)" }}
-            animate={{ clipPath: "circle(150% at 100% 0%)" }}
-            exit={{ clipPath: "circle(0% at 100% 0%)" }}
-            transition={{ duration: 0.65, ease: [0.76, 0, 0.24, 1] }}
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.96 }}
+          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+          style={{ transformOrigin: "100% 0%" }}
                       className="fixed inset-0 z-40 bg-panel grain lg:hidden flex flex-col justify-start px-8 pt-28 pb-10 overflow-y-auto"
           >
             <ul className="flex flex-col gap-1">
